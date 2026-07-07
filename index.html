@@ -9,24 +9,14 @@
 <body>
   <a-scene>
 
-    <!-- 読み込み素材 -->
     <a-assets>
-      <!-- 写真 -->
-      <img id="https://ito-cci.or.jp/" src="https://ito-cci.or.jp/wp-content/uploads/2023/07/ban_itobrand.jpg">
-      <img id="https://ito-cci.or.jp/" src="https://ito-cci.or.jp/wp-content/uploads/2023/07/ban_jizakana.jpg">
-      <img id="https://ito-cci.or.jp/" src="https://ito-cci.or.jp/wp-content/uploads/2023/07/ban_okashi.jpg">
-
-      <!-- 動画 -->
-      <video id="movie1" src="videos/movie1.mp4" autoplay loop muted playsinline></video>
-
-      <!-- 3Dモデル -->
-      <a-asset-item id="model1" src="models/sabakan.glb"></a-asset-item>
+      <img id="photo1" src="https://ito-cci.or.jp/wp-content/uploads/2023/07/ban_itobrand.jpg">
+      <img id="photo2" src="https://ito-cci.or.jp/wp-content/uploads/2023/07/ban_jizakana.jpg">
+      <img id="photo3" src="https://ito-cci.or.jp/wp-content/uploads/2023/07/ban_okashi.jpg">
     </a-assets>
 
-    <!-- 背景 -->
     <a-sky color="#f5f1e8"></a-sky>
 
-    <!-- 床 -->
     <a-plane
       position="0 0 0"
       rotation="-90 0 0"
@@ -35,107 +25,72 @@
       color="#ffffff">
     </a-plane>
 
-    <!-- 奥の壁 -->
     <a-box
       position="0 2 -8"
       width="12"
-      height="4"
+      height="4.5"
       depth="0.2"
       color="#ffffff">
     </a-box>
 
-    <!-- 左の壁 -->
     <a-box
       position="-6 2 -2"
       rotation="0 90 0"
       width="12"
-      height="4"
+      height="4.5"
       depth="0.2"
       color="#ffffff">
     </a-box>
 
-    <!-- 右の壁 -->
     <a-box
       position="6 2 -2"
       rotation="0 90 0"
       width="12"
-      height="4"
+      height="4.5"
       depth="0.2"
       color="#ffffff">
     </a-box>
 
-    <!-- タイトル -->
     <a-text
       value="ITO PEOPLE MUSEUM"
-      position="0 3.4 -7.85"
+      position="0 3.6 -7.85"
       align="center"
       color="#333333"
       width="6">
     </a-text>
 
-    <!-- 説明文 -->
     <a-text
       value="伊東のヒト・商品・仕事の裏側を展示するデジタル博物館"
-      position="0 3 -7.85"
+      position="0 3.25 -7.85"
       align="center"
       color="#555555"
       width="5">
     </a-text>
 
-    <!-- 写真1 -->
     <a-image
       src="#photo1"
-      position="-3 2 -7.8"
-      width="2.5"
-      height="1.7">
+      position="-3.5 2 -7.8"
+      width="3"
+      height="1.6">
     </a-image>
 
-    <!-- 写真2 -->
     <a-image
       src="#photo2"
       position="0 2 -7.8"
-      width="2.5"
-      height="1.7">
+      width="3"
+      height="1.6">
     </a-image>
 
-    <!-- 動画 -->
-    <a-video
-      src="#movie1"
-      position="3 2 -7.8"
-      width="2.5"
-      height="1.7">
-    </a-video>
+    <a-image
+      src="#photo3"
+      position="3.5 2 -7.8"
+      width="3"
+      height="1.6">
+    </a-image>
 
-    <!-- 展示台 -->
-    <a-cylinder
-      position="0 0.4 -4"
-      radius="0.8"
-      height="0.8"
-      color="#eeeeee">
-    </a-cylinder>
-
-    <!-- 3Dモデル -->
-    <a-gltf-model
-      src="#model1"
-      position="0 1 -4"
-      scale="0.8 0.8 0.8"
-      rotation="0 180 0">
-    </a-gltf-model>
-
-    <!-- 3Dモデル説明 -->
-    <a-text
-      value="東平商会 / さば缶 3Dモデル"
-      position="0 0.2 -3"
-      align="center"
-      color="#333333"
-      width="3">
-    </a-text>
-
-    <!-- カメラ -->
     <a-camera position="0 1.6 5"></a-camera>
 
-    <!-- ライト -->
-    <a-light type="ambient" color="#ffffff" intensity="0.8"></a-light>
+    <a-light type="ambient" color="#ffffff" intensity="0.9"></a-light>
     <a-light type="directional" position="0 5 5" intensity="0.6"></a-light>
 
   </a-scene>
