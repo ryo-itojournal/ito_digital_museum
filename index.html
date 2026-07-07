@@ -7,136 +7,97 @@
 </head>
 
 <body>
-  <a-scene>
+<a-scene cursor="rayOrigin: mouse">
 
-    <a-assets>
-      <img id="photo1" src="ban_itobrand.jpg">
-      <img id="photo2" src="ban_jizakana.jpg">
-      <img id="photo3" src="ban_okashi.jpg">
-      <img id="photo4" src="ChatGPT Image 2026年6月17日 13_29_35.png">
-    </a-assets>
+  <a-assets>
+    <img id="photo1" src="ban_itobrand.jpg">
+    <img id="photo2" src="ban_jizakana.jpg">
+    <img id="photo3" src="ban_okashi.jpg">
+    <img id="photo4" src="ChatGPT Image 2026年6月17日 13_29_35.png">
 
-    <a-sky color="#f5f1e8"></a-sky>
+    <img id="instagram" src="instagram.png">
+    <img id="googlemap" src="googlemap.png">
+  </a-assets>
 
-    <a-plane
-      position="0 0 0"
-      rotation="-90 0 0"
-      width="20"
-      height="20"
-      color="#ffffff">
-    </a-plane>
+  <a-sky color="#f5f1e8"></a-sky>
 
-    <a-box
-      position="0 2 -8"
-      width="13"
-      height="4.8"
-      depth="0.2"
-      color="#ffffff">
-    </a-box>
+  <a-plane position="0 0 0" rotation="-90 0 0" width="20" height="20" color="#ffffff"></a-plane>
 
-    <a-box
-      position="-6.5 2 -2"
-      rotation="0 90 0"
-      width="12"
-      height="4.8"
-      depth="0.2"
-      color="#ffffff">
-    </a-box>
+  <a-box position="0 2 -8" width="13" height="5.3" depth="0.2" color="#ffffff"></a-box>
+  <a-box position="-6.5 2 -2" rotation="0 90 0" width="12" height="5.3" depth="0.2" color="#ffffff"></a-box>
+  <a-box position="6.5 2 -2" rotation="0 90 0" width="12" height="5.3" depth="0.2" color="#ffffff"></a-box>
 
-    <a-box
-      position="6.5 2 -2"
-      rotation="0 90 0"
-      width="12"
-      height="4.8"
-      depth="0.2"
-      color="#ffffff">
-    </a-box>
+  <a-text value="ITO PEOPLE MUSEUM" position="0 3.85 -7.85" align="center" color="#333333" width="6"></a-text>
 
-    <a-text
-      value="ITO PEOPLE MUSEUM"
-      position="0 3.75 -7.85"
-      align="center"
-      color="#333333"
-      width="6">
-    </a-text>
+  <a-text
+    value="伊東のヒト・商品・仕事の裏側を展示するデジタル博物館"
+    position="0 3.5 -7.85"
+    align="center"
+    color="#555555"
+    width="5">
+  </a-text>
 
-    <a-text
-      value="伊東のヒト・商品・仕事の裏側を展示するデジタル博物館"
-      position="0 3.4 -7.85"
-      align="center"
-      color="#555555"
-      width="5">
-    </a-text>
+  <!-- いとうのいいもの -->
+  <a-image src="#photo1" position="-4.8 2.35 -7.8" width="2.5" height="1.35"></a-image>
+  <a-text value="いとうのいいもの" position="-4.8 1.55 -7.75" align="center" color="#333333" width="3"></a-text>
 
-    <!-- いとうのいいもの -->
-    <a-image
-      src="#photo1"
-      position="-4.8 2.2 -7.8"
-      width="2.5"
-      height="1.35">
-    </a-image>
+  <a-image src="#instagram" position="-5.15 1.05 -7.7" width="0.32" height="0.32"
+    class="clickable" data-url="https://www.instagram.com/ここにURL"></a-image>
 
-    <a-text
-      value="いとうのいいもの"
-      position="-4.8 1.35 -7.75"
-      align="center"
-      color="#333333"
-      width="3">
-    </a-text>
+  <a-image src="#googlemap" position="-4.45 1.05 -7.7" width="0.32" height="0.32"
+    class="clickable" data-url="https://www.google.com/maps/d/ここにURL"></a-image>
 
-    <!-- 地魚王国 -->
-    <a-image
-      src="#photo2"
-      position="-1.6 2.2 -7.8"
-      width="2.5"
-      height="1.35">
-    </a-image>
 
-    <a-text
-      value="伊豆・いとう地魚王国"
-      position="-1.6 1.35 -7.75"
-      align="center"
-      color="#333333"
-      width="3">
-    </a-text>
+  <!-- 地魚王国 -->
+  <a-image src="#photo2" position="-1.6 2.35 -7.8" width="2.5" height="1.35"></a-image>
+  <a-text value="伊豆・いとう地魚王国" position="-1.6 1.55 -7.75" align="center" color="#333333" width="3"></a-text>
 
-    <!-- お菓子ぃ共和国 -->
-    <a-image
-      src="#photo3"
-      position="1.6 2.2 -7.8"
-      width="2.5"
-      height="1.35">
-    </a-image>
+  <a-image src="#instagram" position="-1.95 1.05 -7.7" width="0.32" height="0.32"
+    class="clickable" data-url="https://www.instagram.com/ここにURL"></a-image>
 
-    <a-text
-      value="伊東お菓子ぃ共和国"
-      position="1.6 1.35 -7.75"
-      align="center"
-      color="#333333"
-      width="3">
-    </a-text>
+  <a-image src="#googlemap" position="-1.25 1.05 -7.7" width="0.32" height="0.32"
+    class="clickable" data-url="https://www.google.com/maps/d/ここにURL"></a-image>
 
-    <!-- ふるさと納税 -->
-    <a-image
-      src="#photo4"
-      position="4.8 2.2 -7.8"
-      width="2.5"
-      height="1.35">
-    </a-image>
 
-    <a-text
-      value="ふるさと納税"
-      position="4.8 1.35 -7.75"
-      align="center"
-      color="#333333"
-      width="3">
-    </a-text>
+  <!-- お菓子ぃ共和国 -->
+  <a-image src="#photo3" position="1.6 2.35 -7.8" width="2.5" height="1.35"></a-image>
+  <a-text value="伊東お菓子ぃ共和国" position="1.6 1.55 -7.75" align="center" color="#333333" width="3"></a-text>
 
-    <a-camera position="0 1.6 5"></a-camera>
+  <a-image src="#instagram" position="1.25 1.05 -7.7" width="0.32" height="0.32"
+    class="clickable" data-url="https://www.instagram.com/ここにURL"></a-image>
 
-    <a-light type="ambient" color="#ffffff" intensity="0.9"></a-light>
-    <a-light type="directional" position="0 5 5" intensity="0.6"></a-light>
+  <a-image src="#googlemap" position="1.95 1.05 -7.7" width="0.32" height="0.32"
+    class="clickable" data-url="https://www.google.com/maps/d/ここにURL"></a-image>
 
-  </a-scene>
+
+  <!-- ふるさと納税 -->
+  <a-image src="#photo4" position="4.8 2.35 -7.8" width="2.5" height="1.35"></a-image>
+  <a-text value="ふるさと納税" position="4.8 1.55 -7.75" align="center" color="#333333" width="3"></a-text>
+
+  <a-image src="#instagram" position="4.45 1.05 -7.7" width="0.32" height="0.32"
+    class="clickable" data-url="https://www.instagram.com/ここにURL"></a-image>
+
+  <a-image src="#googlemap" position="5.15 1.05 -7.7" width="0.32" height="0.32"
+    class="clickable" data-url="https://www.google.com/maps/d/ここにURL"></a-image>
+
+
+  <a-camera position="0 1.6 5"></a-camera>
+
+  <a-light type="ambient" color="#ffffff" intensity="0.9"></a-light>
+  <a-light type="directional" position="0 5 5" intensity="0.6"></a-light>
+
+</a-scene>
+
+<script>
+  document.querySelectorAll('.clickable').forEach(function (el) {
+    el.addEventListener('click', function () {
+      const url = el.getAttribute('data-url');
+      if (url) {
+        window.open(url, '_blank');
+      }
+    });
+  });
+</script>
+
 </body>
-</html>
+</html>  
