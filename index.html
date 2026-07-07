@@ -14,9 +14,6 @@
     <img id="photo2" src="ban_jizakana.jpg">
     <img id="photo3" src="ban_okashi.jpg">
     <img id="photo4" src="ChatGPT Image 2026年6月17日 13_29_35.png">
-
-    <img id="instagram" src="images.jpg">
-    <img id="googlemap" src="ダウンロード.jpg">
   </a-assets>
 
   <a-sky color="#f5f1e8"></a-sky>
@@ -38,50 +35,56 @@
   </a-text>
 
   <!-- いとうのいいもの -->
-  <a-image src="#photo1" position="-4.8 2.35 -7.8" width="2.5" height="1.35"></a-image>
+  <a-image
+    src="#photo1"
+    position="-4.8 2.35 -7.8"
+    width="2.5"
+    height="1.35"
+    class="clickable"
+    data-url="https://ryo-itojournal.github.io/ito-chamber.portal/group/iimono/">
+  </a-image>
+
   <a-text value="いとうのいいもの" position="-4.8 1.55 -7.75" align="center" color="#333333" width="3"></a-text>
 
-  <a-image src="#instagram" position="-5.15 1.05 -7.7" width="0.32" height="0.32"
-    class="clickable" data-url="https://www.instagram.com/ito_iimono.brand/?next=%2Fito_jizakana.kingdom%2F&hl=ja"></a-image>
-
-  <a-image src="#googlemap" position="-4.45 1.05 -7.7" width="0.32" height="0.32"
-    class="clickable" data-url="https://www.google.com/maps/d/ここにURL"></a-image>
-
-
   <!-- 地魚王国 -->
-  <a-image src="#photo2" position="-1.6 2.35 -7.8" width="2.5" height="1.35"></a-image>
+  <a-image
+    src="#photo2"
+    position="-1.6 2.35 -7.8"
+    width="2.5"
+    height="1.35"
+    class="clickable"
+    data-url="https://ryo-itojournal.github.io/ito-chamber.portal/group/jizakana/">
+  </a-image>
+
   <a-text value="伊豆・いとう地魚王国" position="-1.6 1.55 -7.75" align="center" color="#333333" width="3"></a-text>
 
-  <a-image src="#instagram" position="-1.95 1.05 -7.7" width="0.32" height="0.32"
-    class="clickable" data-url="https://www.instagram.com/ito_jizakana.kingdom/?hl=ja"></a-image>
-
-  <a-image src="#googlemap" position="-1.25 1.05 -7.7" width="0.32" height="0.32"
-    class="clickable" data-url="https://www.google.com/maps/d/ここにURL"></a-image>
-
-
   <!-- お菓子ぃ共和国 -->
-  <a-image src="#photo3" position="1.6 2.35 -7.8" width="2.5" height="1.35"></a-image>
+  <a-image
+    src="#photo3"
+    position="1.6 2.35 -7.8"
+    width="2.5"
+    height="1.35"
+    class="clickable"
+    data-url="https://ryo-itojournal.github.io/ito-chamber.portal/group/okashi/">
+  </a-image>
+
   <a-text value="伊東お菓子ぃ共和国" position="1.6 1.55 -7.75" align="center" color="#333333" width="3"></a-text>
 
-  <a-image src="#instagram" position="1.25 1.05 -7.7" width="0.32" height="0.32"
-    class="clickable" data-url="https://www.instagram.com/ito_okashi.republic/?hl=ja"></a-image>
-
-  <a-image src="#googlemap" position="1.95 1.05 -7.7" width="0.32" height="0.32"
-    class="clickable" data-url="https://www.google.com/maps/d/ここにURL"></a-image>
-
-
   <!-- ふるさと納税 -->
-  <a-image src="#photo4" position="4.8 2.35 -7.8" width="2.5" height="1.35"></a-image>
+  <a-image
+    src="#photo4"
+    position="4.8 2.35 -7.8"
+    width="2.5"
+    height="1.35"
+    class="clickable"
+    data-url="https://ryo-itojournal.github.io/ito-chamber.portal/group/furusato/">
+  </a-image>
+
   <a-text value="ふるさと納税" position="4.8 1.55 -7.75" align="center" color="#333333" width="3"></a-text>
 
-  <a-image src="#instagram" position="4.45 1.05 -7.7" width="0.32" height="0.32"
-    class="clickable" data-url="https://www.instagram.com/ito_furusato.donation/?next=%2Fito_iimono.brand%2F&hl=ja"></a-image>
-
-  <a-image src="#googlemap" position="5.15 1.05 -7.7" width="0.32" height="0.32"
-    class="clickable" data-url="https://www.google.com/maps/d/ここにURL"></a-image>
-
-
-  <a-camera position="0 1.6 5"></a-camera>
+  <a-camera position="0 1.6 5">
+    <a-cursor color="#FF6600"></a-cursor>
+  </a-camera>
 
   <a-light type="ambient" color="#ffffff" intensity="0.9"></a-light>
   <a-light type="directional" position="0 5 5" intensity="0.6"></a-light>
@@ -93,11 +96,11 @@
     el.addEventListener('click', function () {
       const url = el.getAttribute('data-url');
       if (url) {
-        window.open(url, '_blank');
+        window.location.href = url;
       }
     });
   });
 </script>
 
 </body>
-</html>  
+</html>
