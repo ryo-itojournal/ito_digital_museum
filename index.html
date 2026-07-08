@@ -19,31 +19,15 @@
     <img id="googlemap" src="ダウンロード.jpg">
   </a-assets>
 
-  <!-- 背景 -->
   <a-sky color="#151515"></a-sky>
 
-  <!-- 床：ダークグレー -->
-  <a-plane
-    position="0 0 0"
-    rotation="-90 0 0"
-    width="24"
-    height="24"
-    color="#2b2b2b">
-  </a-plane>
+  <a-plane position="0 0 0" rotation="-90 0 0" width="24" height="24" color="#2b2b2b"></a-plane>
 
-  <!-- 奥壁 -->
   <a-box position="0 2.4 -8" width="14" height="5.8" depth="0.18" color="#f7f7f7"></a-box>
-
-  <!-- 左壁 -->
   <a-box position="-7 2.4 -2" rotation="0 90 0" width="12" height="5.8" depth="0.18" color="#e9e9e9"></a-box>
-
-  <!-- 右壁 -->
   <a-box position="7 2.4 -2" rotation="0 90 0" width="12" height="5.8" depth="0.18" color="#e9e9e9"></a-box>
-
-  <!-- 天井 -->
   <a-box position="0 5.3 -2" width="14" height="0.18" depth="12" color="#1f1f1f"></a-box>
 
-  <!-- タイトルパネル -->
   <a-box position="0 3.95 -7.75" width="7.2" height="0.75" depth="0.08" color="#111111"></a-box>
 
   <a-text
@@ -70,7 +54,7 @@
     width="2.5"
     height="1.35"
     class="clickable"
-    data-url="https://ryo-itojournal.github.io/ito-chamber.portal/group/iimono/">
+    data-url="iimono/index.html">
   </a-image>
   <a-text value="いとうのいいもの" position="-4.8 1.45 -7.65" align="center" color="#222222" width="3"></a-text>
   <a-image src="#instagram" position="-5.15 0.98 -7.65" width="0.34" height="0.34" class="clickable" data-url="https://www.instagram.com/ここにURL"></a-image>
@@ -79,12 +63,12 @@
   <!-- 地魚王国 -->
   <a-box position="-1.6 2.35 -7.72" width="2.75" height="1.55" depth="0.08" color="#111111"></a-box>
   <a-image
-   src="#photo2"
-   position="-1.6 2.35 -7.8"
-   width="2.5"
-   height="1.35"
-   class="clickable"
-   data-url="jizakana/index.html">
+    src="#photo2"
+    position="-1.6 2.35 -7.65"
+    width="2.5"
+    height="1.35"
+    class="clickable"
+    data-url="jizakana/index.html">
   </a-image>
   <a-text value="伊豆・いとう地魚王国" position="-1.6 1.45 -7.65" align="center" color="#222222" width="3"></a-text>
   <a-image src="#instagram" position="-1.95 0.98 -7.65" width="0.34" height="0.34" class="clickable" data-url="https://www.instagram.com/ここにURL"></a-image>
@@ -98,7 +82,7 @@
     width="2.5"
     height="1.35"
     class="clickable"
-    data-url="https://ryo-itojournal.github.io/ito-chamber.portal/group/okashi/">
+    data-url="okashi/index.html">
   </a-image>
   <a-text value="伊東お菓子ぃ共和国" position="1.6 1.45 -7.65" align="center" color="#222222" width="3"></a-text>
   <a-image src="#instagram" position="1.25 0.98 -7.65" width="0.34" height="0.34" class="clickable" data-url="https://www.instagram.com/ここにURL"></a-image>
@@ -112,20 +96,18 @@
     width="2.5"
     height="1.35"
     class="clickable"
-    data-url="https://ryo-itojournal.github.io/ito-chamber.portal/group/furusato/">
+    data-url="furusato/index.html">
   </a-image>
   <a-text value="ふるさと納税" position="4.8 1.45 -7.65" align="center" color="#222222" width="3"></a-text>
   <a-image src="#instagram" position="4.45 0.98 -7.65" width="0.34" height="0.34" class="clickable" data-url="https://www.instagram.com/ここにURL"></a-image>
   <a-image src="#googlemap" position="5.15 0.98 -7.65" width="0.34" height="0.34" class="clickable" data-url="https://www.google.com/maps/d/ここにURL"></a-image>
 
-  <!-- スポットライト -->
   <a-light type="ambient" color="#ffffff" intensity="0.45"></a-light>
   <a-light type="spot" position="-4.8 4 -5.5" rotation="-35 0 0" intensity="1.2" angle="35"></a-light>
   <a-light type="spot" position="-1.6 4 -5.5" rotation="-35 0 0" intensity="1.2" angle="35"></a-light>
   <a-light type="spot" position="1.6 4 -5.5" rotation="-35 0 0" intensity="1.2" angle="35"></a-light>
   <a-light type="spot" position="4.8 4 -5.5" rotation="-35 0 0" intensity="1.2" angle="35"></a-light>
 
-  <!-- カメラ -->
   <a-camera position="0 1.6 5">
     <a-cursor color="#ff6600"></a-cursor>
   </a-camera>
@@ -137,7 +119,7 @@
     el.addEventListener('click', function () {
       const url = el.getAttribute('data-url');
       if (url) {
-        window.open(url, '_blank');
+        window.open(url, '_self');
       }
     });
   });
