@@ -7,7 +7,7 @@
 </head>
 
 <body>
-<a-scene cursor="rayOrigin: mouse">
+<a-scene cursor="rayOrigin: mouse" background="color: #111111">
 
   <a-assets>
     <img id="photo1" src="ban_itobrand.jpg">
@@ -19,150 +19,116 @@
     <img id="googlemap" src="ダウンロード.jpg">
   </a-assets>
 
-  <a-sky color="#f5f1e8"></a-sky>
+  <!-- 背景 -->
+  <a-sky color="#151515"></a-sky>
 
-  <a-plane position="0 0 0" rotation="-90 0 0" width="20" height="20" color="#ffffff"></a-plane>
+  <!-- 床：ダークグレー -->
+  <a-plane
+    position="0 0 0"
+    rotation="-90 0 0"
+    width="24"
+    height="24"
+    color="#2b2b2b">
+  </a-plane>
 
-  <a-box position="0 2 -8" width="13" height="5.3" depth="0.2" color="#ffffff"></a-box>
-  <a-box position="-6.5 2 -2" rotation="0 90 0" width="12" height="5.3" depth="0.2" color="#ffffff"></a-box>
-  <a-box position="6.5 2 -2" rotation="0 90 0" width="12" height="5.3" depth="0.2" color="#ffffff"></a-box>
+  <!-- 奥壁 -->
+  <a-box position="0 2.4 -8" width="14" height="5.8" depth="0.18" color="#f7f7f7"></a-box>
 
-  <a-text value="ITO PEOPLE MUSEUM" position="0 3.85 -7.85" align="center" color="#333333" width="6"></a-text>
+  <!-- 左壁 -->
+  <a-box position="-7 2.4 -2" rotation="0 90 0" width="12" height="5.8" depth="0.18" color="#e9e9e9"></a-box>
+
+  <!-- 右壁 -->
+  <a-box position="7 2.4 -2" rotation="0 90 0" width="12" height="5.8" depth="0.18" color="#e9e9e9"></a-box>
+
+  <!-- 天井 -->
+  <a-box position="0 5.3 -2" width="14" height="0.18" depth="12" color="#1f1f1f"></a-box>
+
+  <!-- タイトルパネル -->
+  <a-box position="0 3.95 -7.75" width="7.2" height="0.75" depth="0.08" color="#111111"></a-box>
+
+  <a-text
+    value="ITO PEOPLE MUSEUM"
+    position="0 4.05 -7.68"
+    align="center"
+    color="#ffffff"
+    width="6">
+  </a-text>
 
   <a-text
     value="伊東のヒト・商品・仕事の裏側を展示するデジタル博物館"
-    position="0 3.5 -7.85"
+    position="0 3.55 -7.68"
     align="center"
-    color="#555555"
-    width="5">
+    color="#333333"
+    width="5.8">
   </a-text>
 
   <!-- いとうのいいもの -->
+  <a-box position="-4.8 2.35 -7.72" width="2.75" height="1.55" depth="0.08" color="#111111"></a-box>
   <a-image
     src="#photo1"
-    position="-4.8 2.35 -7.8"
+    position="-4.8 2.35 -7.65"
     width="2.5"
     height="1.35"
     class="clickable"
     data-url="https://ryo-itojournal.github.io/ito-chamber.portal/group/iimono/">
   </a-image>
-
-  <a-text value="いとうのいいもの" position="-4.8 1.55 -7.75" align="center" color="#333333" width="3"></a-text>
-
-  <a-image
-    src="#instagram"
-    position="-5.15 1.05 -7.7"
-    width="0.32"
-    height="0.32"
-    class="clickable"
-    data-url="https://www.instagram.com/ここにURL">
-  </a-image>
-
-  <a-image
-    src="#googlemap"
-    position="-4.45 1.05 -7.7"
-    width="0.32"
-    height="0.32"
-    class="clickable"
-    data-url="https://www.google.com/maps/d/ここにURL">
-  </a-image>
+  <a-text value="いとうのいいもの" position="-4.8 1.45 -7.65" align="center" color="#222222" width="3"></a-text>
+  <a-image src="#instagram" position="-5.15 0.98 -7.65" width="0.34" height="0.34" class="clickable" data-url="https://www.instagram.com/ここにURL"></a-image>
+  <a-image src="#googlemap" position="-4.45 0.98 -7.65" width="0.34" height="0.34" class="clickable" data-url="https://www.google.com/maps/d/ここにURL"></a-image>
 
   <!-- 地魚王国 -->
+  <a-box position="-1.6 2.35 -7.72" width="2.75" height="1.55" depth="0.08" color="#111111"></a-box>
   <a-image
     src="#photo2"
-    position="-1.6 2.35 -7.8"
+    position="-1.6 2.35 -7.65"
     width="2.5"
     height="1.35"
     class="clickable"
     data-url="https://ryo-itojournal.github.io/ito-chamber.portal/group/jizakana/">
   </a-image>
-
-  <a-text value="伊豆・いとう地魚王国" position="-1.6 1.55 -7.75" align="center" color="#333333" width="3"></a-text>
-
-  <a-image
-    src="#instagram"
-    position="-1.95 1.05 -7.7"
-    width="0.32"
-    height="0.32"
-    class="clickable"
-    data-url="https://www.instagram.com/ここにURL">
-  </a-image>
-
-  <a-image
-    src="#googlemap"
-    position="-1.25 1.05 -7.7"
-    width="0.32"
-    height="0.32"
-    class="clickable"
-    data-url="https://www.google.com/maps/d/ここにURL">
-  </a-image>
+  <a-text value="伊豆・いとう地魚王国" position="-1.6 1.45 -7.65" align="center" color="#222222" width="3"></a-text>
+  <a-image src="#instagram" position="-1.95 0.98 -7.65" width="0.34" height="0.34" class="clickable" data-url="https://www.instagram.com/ここにURL"></a-image>
+  <a-image src="#googlemap" position="-1.25 0.98 -7.65" width="0.34" height="0.34" class="clickable" data-url="https://www.google.com/maps/d/ここにURL"></a-image>
 
   <!-- お菓子ぃ共和国 -->
+  <a-box position="1.6 2.35 -7.72" width="2.75" height="1.55" depth="0.08" color="#111111"></a-box>
   <a-image
     src="#photo3"
-    position="1.6 2.35 -7.8"
+    position="1.6 2.35 -7.65"
     width="2.5"
     height="1.35"
     class="clickable"
     data-url="https://ryo-itojournal.github.io/ito-chamber.portal/group/okashi/">
   </a-image>
-
-  <a-text value="伊東お菓子ぃ共和国" position="1.6 1.55 -7.75" align="center" color="#333333" width="3"></a-text>
-
-  <a-image
-    src="#instagram"
-    position="1.25 1.05 -7.7"
-    width="0.32"
-    height="0.32"
-    class="clickable"
-    data-url="https://www.instagram.com/ここにURL">
-  </a-image>
-
-  <a-image
-    src="#googlemap"
-    position="1.95 1.05 -7.7"
-    width="0.32"
-    height="0.32"
-    class="clickable"
-    data-url="https://www.google.com/maps/d/ここにURL">
-  </a-image>
+  <a-text value="伊東お菓子ぃ共和国" position="1.6 1.45 -7.65" align="center" color="#222222" width="3"></a-text>
+  <a-image src="#instagram" position="1.25 0.98 -7.65" width="0.34" height="0.34" class="clickable" data-url="https://www.instagram.com/ここにURL"></a-image>
+  <a-image src="#googlemap" position="1.95 0.98 -7.65" width="0.34" height="0.34" class="clickable" data-url="https://www.google.com/maps/d/ここにURL"></a-image>
 
   <!-- ふるさと納税 -->
+  <a-box position="4.8 2.35 -7.72" width="2.75" height="1.55" depth="0.08" color="#111111"></a-box>
   <a-image
     src="#photo4"
-    position="4.8 2.35 -7.8"
+    position="4.8 2.35 -7.65"
     width="2.5"
     height="1.35"
     class="clickable"
     data-url="https://ryo-itojournal.github.io/ito-chamber.portal/group/furusato/">
   </a-image>
+  <a-text value="ふるさと納税" position="4.8 1.45 -7.65" align="center" color="#222222" width="3"></a-text>
+  <a-image src="#instagram" position="4.45 0.98 -7.65" width="0.34" height="0.34" class="clickable" data-url="https://www.instagram.com/ここにURL"></a-image>
+  <a-image src="#googlemap" position="5.15 0.98 -7.65" width="0.34" height="0.34" class="clickable" data-url="https://www.google.com/maps/d/ここにURL"></a-image>
 
-  <a-text value="ふるさと納税" position="4.8 1.55 -7.75" align="center" color="#333333" width="3"></a-text>
+  <!-- スポットライト -->
+  <a-light type="ambient" color="#ffffff" intensity="0.45"></a-light>
+  <a-light type="spot" position="-4.8 4 -5.5" rotation="-35 0 0" intensity="1.2" angle="35"></a-light>
+  <a-light type="spot" position="-1.6 4 -5.5" rotation="-35 0 0" intensity="1.2" angle="35"></a-light>
+  <a-light type="spot" position="1.6 4 -5.5" rotation="-35 0 0" intensity="1.2" angle="35"></a-light>
+  <a-light type="spot" position="4.8 4 -5.5" rotation="-35 0 0" intensity="1.2" angle="35"></a-light>
 
-  <a-image
-    src="#instagram"
-    position="4.45 1.05 -7.7"
-    width="0.32"
-    height="0.32"
-    class="clickable"
-    data-url="https://www.instagram.com/ここにURL">
-  </a-image>
-
-  <a-image
-    src="#googlemap"
-    position="5.15 1.05 -7.7"
-    width="0.32"
-    height="0.32"
-    class="clickable"
-    data-url="https://www.google.com/maps/d/ここにURL">
-  </a-image>
-
+  <!-- カメラ -->
   <a-camera position="0 1.6 5">
     <a-cursor color="#ff6600"></a-cursor>
   </a-camera>
-
-  <a-light type="ambient" color="#ffffff" intensity="0.9"></a-light>
-  <a-light type="directional" position="0 5 5" intensity="0.6"></a-light>
 
 </a-scene>
 
